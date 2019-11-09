@@ -1,0 +1,8 @@
+### DJANGO ###
+/venv
+*.pyc
+/media
+/db.sqlite3
+
+### VSCODE ###
+.vscode

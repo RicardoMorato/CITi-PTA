@@ -11,9 +11,12 @@
 
 </head>
 <body class="padrao">
-    <div >
-        <img class="imagem_perfil" src="https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/s960x960/21366756_1264890203615226_4773081648160796270_o.jpg?_nc_cat=106&_nc_oc=AQmfQBZhGP5teDrvRPOzO3c0na2DNkloSlEddIi9l1B5I2B8QFhOqVWi8dg6aA5mei8&_nc_ht=scontent.frec10-1.fna&oh=27975c76e3aaae13d9e52f8aa40863ac&oe=5E491747" alt="">
-    </div>
+
+        {% for imagem in imagemPerfil %} <!--Agora a imagem de perfil também é editável-->
+        <div>
+            <img class="imagem_perfil" src="{{ imagem.url }}" alt="Imagem de perfil">
+        </div>
+        {% endfor %}
 
     {% for info in infos %} <!--Inicia um laço que itera sobre o array de pessoas enviado como contexto pela view-->
         <div class="pessoal">

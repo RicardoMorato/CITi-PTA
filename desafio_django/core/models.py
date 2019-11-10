@@ -1,5 +1,16 @@
 from django.db import models
 
+# Model responsável por trocar a imagem de perfil.
+class ImagemPerfil(models.Model):
+
+    url = models.URLField('link', max_length=300)
+
+    imagem = models.ImageField('imagem', upload_to='imagens/', null=True, blank=True)
+    # Criei uma nova pasta chamada imagens para que o upload seja feito para essa pasta.
+
+    def __str__(self):
+        return self.url
+
 # Model responsável por armazenar minhas informações pessoais.
 class Pessoal(models.Model):
 

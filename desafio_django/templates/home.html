@@ -15,12 +15,21 @@
         <img class="imagem_perfil" src="https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/s960x960/21366756_1264890203615226_4773081648160796270_o.jpg?_nc_cat=106&_nc_oc=AQmfQBZhGP5teDrvRPOzO3c0na2DNkloSlEddIi9l1B5I2B8QFhOqVWi8dg6aA5mei8&_nc_ht=scontent.frec10-1.fna&oh=27975c76e3aaae13d9e52f8aa40863ac&oe=5E491747" alt="">
     </div>
 
-    <div class="pessoal">
-        <p>Nome: {{ pessoal.Nome }}</p>
-        <p>Idade: {{ pessoal.Idade }}</p>
-        <p>Namora: {{ pessoal.Namoro }}</p>
-        <p>Pensamento sobre o CITi: {{ pessoal.CITi }}</p>
-    </div>
+    {% for info in infos %} <!--Inicia um laço que itera sobre o array de pessoas enviado como contexto pela view-->
+        <div class="pessoal">
+            <p>Nome: Ricardo Morato Rocha</p>
+            <p>Idade: {{ info.idade }}</p>
+
+            {% if info.namora %}
+                <p>Namora: SIM</p>
+            {% else %}
+                <p>Namora: NÃO :=(</p>
+            {% endif %}
+
+            <p>Pensamento sobre o CITi: {{ info.entrar_CITi }}</p>
+        </div>
+    {% endfor %}
+
 
     <h3 class="subtitles">Meus hobbys:</h3>
     <div class="gostos">

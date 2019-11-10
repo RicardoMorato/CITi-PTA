@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ricardo Morato Rocha</title>
+    <link href="https://fonts.googleapis.com/css?family=Jomolhari|Lato|McLaren|Montserrat|Open+Sans|Roboto|Roboto+Condensed|Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+</head>
+<body class="padrao">
+    <div >
+        <img class="imagem_perfil" src="https://scontent.frec10-1.fna.fbcdn.net/v/t31.0-8/s960x960/21366756_1264890203615226_4773081648160796270_o.jpg?_nc_cat=106&_nc_oc=AQmfQBZhGP5teDrvRPOzO3c0na2DNkloSlEddIi9l1B5I2B8QFhOqVWi8dg6aA5mei8&_nc_ht=scontent.frec10-1.fna&oh=27975c76e3aaae13d9e52f8aa40863ac&oe=5E491747" alt="">
+    </div>
+
+    {% for caracteristicas in pessoal %}
+    <div class="pessoal">
+        <p>Nome: {{ pessoal.Nome }}</p>
+        <p>Idade: {{ pessoal.Idade }}</p>
+        <p>Namora: {{ pessoal.Namoro }}</p>
+        <p>Pensamento sobre o CITi: {{ pessoal.CITi }}</p>
+    </div>
+    {% endfor %}
+
+    <h3 class="subtitles">Meus hobbys:</h3>
+    <div class="gostos">
+        <ul>
+            <li>Jogar videogames</li>
+            <li>Ler livros que me ensinem algo</li>
+            <li>Estudar fisica</li>
+            <li>Programar</li>
+            <li>Vencer desafios, principalmente de logica</li>
+            <li>Passar tempo com minha namorada :-)</li>
+        </ul>
+    </div>
+
+    <h3 class="subtitles">Coisas que eu gosto, mas não sou tao bom:</h3>
+    <div class = "gostos">
+        <ol class = "listinha_odernada">
+            <li>Design, por isso que essa página assim ;-;</li>
+            <li>Mexer no Linux, eu até tento ;-;</li>
+        </ol>
+    </div>
+
+    <h3 class="subtitles">Filmes, séries, animes e Bandas/Artistas:</h3>
+    <div class="gostos">
+        <ul>
+            <li>Sociedade dos poetas mortos</li>
+            <li>Star Wars IV</li>
+            <li>Senhor dos anéis (todos)</li>
+            <li>Stranger Things</li>
+            <li>Bojack Horseman</li>
+            <li>Naruto</li>
+            <li>Hamilton, da Broadway</li>
+            <li>Imagine Dragons</li>
+            <li>Skank</li>
+            <li>Iron Maiden</li>
+            <li>Lady Gaga</li>
+            <li>Sam Smith</li>
+        </ul>
+    </div>
+
+    <h3 class="subtitles">Imagens de algumas coisas que eu gosto:</h3>
+    <h5 calss="subtitles">Clique para ser redirecionado à respectiva página da Wikipédia</h5>
+    <div class="coisas_que_gosto">
+
+        <a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_de_computadores">
+            <img class="imagem" src="https://miro.medium.com/max/10913/0*ruAV5iyZ4Dt6768j" alt="">
+        </a>
+
+        <a href="https://pt.wikipedia.org/wiki/F%C3%ADsica">
+            <img class="imagem" src="https://images-na.ssl-images-amazon.com/images/I/41EGT-KEOuL.jpg" alt="">
+        </a>
+
+        <a href="https://pt.wikipedia.org/wiki/C%C3%A1lculo">
+            <img class="imagem" src="https://images-na.ssl-images-amazon.com/images/I/510c3Td59TL._SX373_BO1,304,303,300_.jpg" alt="">
+        </a>
+
+        <a href="https://pt.wikipedia.org/wiki/Age_of_Mythology">
+            <img class="imagem" src="https://upload.wikimedia.org/wikipedia/pt/thumb/f/fe/Age_Of_Mythology.jpg/300px-Age_Of_Mythology.jpg" alt="">
+        </a>
+
+        <a href="https://pt.wikipedia.org/wiki/Hamilton_(musical)">
+            <img class="imagem" src="https://www.broadwaysd.com/wp-content/uploads/2017/12/hamilton-main-1.jpg" alt="">
+        </a>
+
+    </div>
+
+</body>
+</html>

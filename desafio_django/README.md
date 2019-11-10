@@ -1,8 +1,8 @@
 - Desafio do primeiro Sábado do PTA:
     -> É necessário fazer o back-end em django do desafio de HTML e CSS feito anteriormente.
 
-    --> Agora só falta fazer os models:
-        - Imagens de alguma coisas que eu gosto.
+    --> Agora só falta fazer o model:
+        * Imagens de alguma coisas que eu gosto.
 
 - Passo a passo:
 1. Fazer o model na página models.py.

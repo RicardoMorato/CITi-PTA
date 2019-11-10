@@ -4,7 +4,7 @@
     --> Agora só falta fazer o model:
     - Imagens de alguma coisas que eu gosto.
 
-- **## Passo a passo:**
+- ## **Passo a passo:**
 1. Fazer o model na página models.py.
 2. Fazer um makemigration e um migration, pois houve uma alteração na página de models.
 3. Importar o model criado na página views.py.

@@ -46,13 +46,18 @@
     {% endfor %}
 
 
-    <h3 class="subtitles">Coisas que eu gosto, mas não sou tao bom:</h3>
-    <div class = "gostos">
-        <ol class = "listinha_odernada">
-            <li>Design, por isso que essa página assim ;-;</li>
-            <li>Mexer no Linux, eu até tento ;-;</li>
-        </ol>
-    </div>
+    {% if coisas_que_nao_sou_bom %} <!--Só mostra essa seção se existir alguma coisa nela-->
+        <h3 class="subtitles">Coisas que eu gosto, mas não sou tao bom:</h3>
+        {% for coisa in coisas_que_nao_sou_bom %}
+            <div class = "gostos">
+                <ol class = "listinha_odernada">
+                    <li>{{ coisa.atividade }}</li>
+                </ol>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
 
     <h3 class="subtitles">Filmes, séries, animes e Bandas/Artistas:</h3>
     <div class="gostos">

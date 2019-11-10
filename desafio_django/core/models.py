@@ -35,3 +35,10 @@ class Hobby(models.Model):
 
     def __str__(self):
         return self.atividade
+
+
+class CoisasQueNaoSouBom(models.Model):
+    atividade = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.atividade

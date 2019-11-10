@@ -8,6 +8,10 @@ class ImagemPerfil(models.Model):
     imagem = models.ImageField('imagem', upload_to='imagens/', null=True, blank=True)
     # Criei uma nova pasta chamada imagens para que o upload seja feito para essa pasta.
 
+    class Meta:
+        verbose_name = 'Imagem de Perfil'
+        verbose_name_plural = 'Imagens de Perfil'
+
     def __str__(self):
         return self.url
 
@@ -24,6 +28,9 @@ class Pessoal(models.Model):
     entrar_CITi = models.CharField('citi', max_length=75, blank=True, null=True)
     # Aqui vou botar uma mensagem sobre como está meu ânimo sobre o CITi, editável pois posso ficar mudando a mensagem co o passar do tempo.
 
+    class Meta:
+        verbose_name = 'Informação pessoal'
+        verbose_name_plural = 'Informações pessoais'
 
     def __str__(self):
         return self.idade
@@ -39,6 +46,10 @@ class Hobby(models.Model):
 
 class CoisasQueNaoSouBom(models.Model):
     atividade = models.CharField(max_length=150)
+
+    class Meta:
+        verbose_name = 'Atividade que posso melhorar'
+        verbose_name_plural = 'Atividades que posso melhorar'
 
     def __str__(self):
         return self.atividade

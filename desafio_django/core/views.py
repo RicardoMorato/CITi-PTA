@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import ImagemPerfil, Pessoal, Hobby, CoisasQueNaoSouBom, Entretenimento
+from .models import ImagemPerfil, Pessoal, Hobby, CoisasQueNaoSouBom, Entretenimento, ImagensCoisasQueGosto
 
 
 # Create your views here.
@@ -17,4 +17,5 @@ class HomeView(generic.TemplateView):
         context["hobbys"] = Hobby.objects.all()
         context["coisas_que_nao_sou_bom"] = CoisasQueNaoSouBom.objects.all()
         context["obras_de_entretenimento"] = Entretenimento.objects.all()
+        context["imagens_coisas_que_gosto"] = ImagensCoisasQueGosto.objects.all()
         return context

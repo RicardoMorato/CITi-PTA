@@ -72,7 +72,7 @@
     {% endif %}
 
     <h3 class="subtitles">Imagens de algumas coisas que eu gosto:</h3>
-    <h5 calss="subtitles">Clique para ser redirecionado à respectiva página da Wikipédia</h5>
+    <h5 calss="subtitles">Clique para ser redirecionado para saber um pouco mais sobre cada coisa</h5>
     <div class="coisas_que_gosto">
 
         <a href="https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_de_computadores">
@@ -95,6 +95,11 @@
             <img class="imagem" src="https://www.broadwaysd.com/wp-content/uploads/2017/12/hamilton-main-1.jpg" alt="">
         </a>
 
+        {% for imagens in imagens_coisas_que_gosto %}
+            <a href="{{ imagens.url_sobre_a_imagem }}">
+                <img src="{{ imagens.url_imagem }}" alt="{{ imagens.imagem_upload }}">
+            </a>
+        {% endfor %}
     </div>
 
 </body>

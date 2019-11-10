@@ -3,17 +3,16 @@ from .models import Pessoal
 from .models import ImagemPerfil
 from .models import Hobby
 from .models import CoisasQueNaoSouBom
+from .models import Entretenimento
 
-# Register your models here.
+# Os comandos abaixo servem para habilitar o administrador a registrar os models criados
 
 admin.site.register(Pessoal)
-# Cria a opção do administrador editar o modelo 'Pessoal'.
 
 admin.site.register(ImagemPerfil)
-# Cria a opcao do administrador de editar a imagem de perfil
 
 admin.site.register(Hobby)
-# Cria a opcao do administrador de editar os hobbys.
 
 admin.site.register(CoisasQueNaoSouBom)
-# Cria essa nova opcao de registro também.
+
+admin.site.register(Entretenimento)

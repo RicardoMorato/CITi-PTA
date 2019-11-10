@@ -53,3 +53,14 @@ class CoisasQueNaoSouBom(models.Model):
 
     def __str__(self):
         return self.atividade
+
+class Entretenimento(models.Model):
+    nome_da_obra = models.CharField('nome', max_length=200)
+    url_sobre_a_obra = models.URLField('link', max_length=400, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Obra de entretenimento'
+        verbose_name_plural = 'Obras de entretenimento'
+
+    def __str__(self):
+        return self.nome_da_obra

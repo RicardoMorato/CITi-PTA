@@ -42,7 +42,7 @@
             </ul>
         </div>
     {% empty %} <!--Se não tiver nenhum hobby cadastrado pelo admin, essa mensagem será mostrada-->
-        <h4>Sem hobbys no momento ;-;</h4>
+        <h5>Ultimamente não tenho feito nada de interessante ;-;</h5>
     {% endfor %}
 
 
@@ -58,24 +58,18 @@
     {% endif %}
 
 
-
-    <h3 class="subtitles">Filmes, séries, animes e Bandas/Artistas:</h3>
-    <div class="gostos">
-        <ul>
-            <li>Sociedade dos poetas mortos</li>
-            <li>Star Wars IV</li>
-            <li>Senhor dos anéis (todos)</li>
-            <li>Stranger Things</li>
-            <li>Bojack Horseman</li>
-            <li>Naruto</li>
-            <li>Hamilton, da Broadway</li>
-            <li>Imagine Dragons</li>
-            <li>Skank</li>
-            <li>Iron Maiden</li>
-            <li>Lady Gaga</li>
-            <li>Sam Smith</li>
-        </ul>
-    </div>
+    {% if obras_de_entretenimento %}
+        <h3 class="subtitles">Minhas obras favoritas de entretenimento:</h3>
+        <div class="gostos">
+            {% for obra in obras_de_entretenimento %}
+                <ul>
+                    <a href="{{ obra.url_sobre_a_obra }}">
+                        <li>{{ obra.nome_da_obra }}</li>
+                    </a>
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     <h3 class="subtitles">Imagens de algumas coisas que eu gosto:</h3>
     <h5 calss="subtitles">Clique para ser redirecionado à respectiva página da Wikipédia</h5>

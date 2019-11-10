@@ -1,6 +1,6 @@
 from django.db import models
 
-# Model responsável por trocar a imagem de perfil.
+
 class ImagemPerfil(models.Model):
 
     url = models.URLField('link', max_length=300)
@@ -11,7 +11,8 @@ class ImagemPerfil(models.Model):
     def __str__(self):
         return self.url
 
-# Model responsável por armazenar minhas informações pessoais.
+
+
 class Pessoal(models.Model):
 
     idade = models.IntegerField('idade')
@@ -20,9 +21,17 @@ class Pessoal(models.Model):
     namora = models.BooleanField('namoro', default=True)
     # Deixei esse campo como editável só pra ele não ser o diferentão, mas setei o default dele como true, pq espero que ele continue sempre assim kkkkkkk.
 
-    entrar_CITi = models.CharField("citi", max_length=75, blank=True, null=True)
+    entrar_CITi = models.CharField('citi', max_length=75, blank=True, null=True)
     # Aqui vou botar uma mensagem sobre como está meu ânimo sobre o CITi, editável pois posso ficar mudando a mensagem co o passar do tempo.
 
 
     def __str__(self):
         return self.idade
+
+
+class Hobby(models.Model):
+    atividade = models.CharField(max_length=100)
+    # O admin pode editar meus hobbys, pois posso mudar de hobbys com o passar do tempo
+
+    def __str__(self):
+        return self.atividade

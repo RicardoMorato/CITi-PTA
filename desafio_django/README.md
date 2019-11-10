@@ -2,7 +2,12 @@
     -> É necessário fazer o back-end em django do desafio de HTML e CSS feito anteriormente.
 
     --> Agora só falta fazer os models:
-        - Hobby,
         - Coisas que não sou tão bom,
         - Filmes, séries, bandas/artistas,
         - Imagens de alguma coisas que eu gosto.
+
+- Passo a passo:
+1. Fazer o model na página models.py
+2. Fazer um makemigration e um migration, pois houve uma alteração na página de models.
+3. Importar o model criado na página views.py
+4. Colocar a lógica no template.

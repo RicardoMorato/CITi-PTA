@@ -35,16 +35,16 @@
 
 
     <h3 class="subtitles">Meus hobbys:</h3>
-    <div class="gostos">
-        <ul>
-            <li>Jogar videogames</li>
-            <li>Ler livros que me ensinem algo</li>
-            <li>Estudar fisica</li>
-            <li>Programar</li>
-            <li>Vencer desafios, principalmente de logica</li>
-            <li>Passar tempo com minha namorada :-)</li>
-        </ul>
-    </div>
+    {% for hobby in hobbys %}
+        <div class="gostos">
+            <ul>
+                <li>{{ hobby.atividade }}</li>
+            </ul>
+        </div>
+    {% empty %} <!--Se não tiver nenhum hobby cadastrado pelo admin, essa mensagem será mostrada-->
+        <h4>Sem hobbys no momento ;-;</h4>
+    {% endfor %}
+
 
     <h3 class="subtitles">Coisas que eu gosto, mas não sou tao bom:</h3>
     <div class = "gostos">

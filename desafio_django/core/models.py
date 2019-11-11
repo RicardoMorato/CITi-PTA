@@ -1,7 +1,8 @@
 from django.db import models
+from solo.models import SingletonModel
 
 
-class ImagemPerfil(models.Model):
+class ImagemPerfil(SingletonModel):
 
     url = models.URLField('Link da imagem', max_length=400)
 

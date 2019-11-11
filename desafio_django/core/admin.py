@@ -1,16 +1,11 @@
 from django.contrib import admin
-from .models import Pessoal
-from .models import ImagemPerfil
-from .models import Hobby
-from .models import CoisasQueNaoSouBom
-from .models import Entretenimento
-from .models import ImagensCoisasQueGosto
-
+from .models import Pessoal, ImagemPerfil, Hobby, CoisasQueNaoSouBom, Entretenimento, ImagensCoisasQueGosto
+from solo.admin import SingletonModelAdmin
 # Os comandos abaixo servem para habilitar o administrador a registrar os models criados
 
 admin.site.register(Pessoal)
 
-admin.site.register(ImagemPerfil)
+admin.site.register(ImagemPerfil, SingletonModelAdmin)
 
 admin.site.register(Hobby)
 

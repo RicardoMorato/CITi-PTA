@@ -4,9 +4,10 @@ from solo.models import SingletonModel
 
 class ImagemPerfil(SingletonModel):
 
-    url = models.URLField('Link da imagem', max_length=400)
+    # url = models.URLField('Link da imagem', max_length=400)
+    nome = models.CharField(max_length=100, default='Nome da imagem')
 
-    imagem = models.ImageField('Upload da imagem', upload_to='imagens/', null=True, blank=True)
+    imagem = models.ImageField('Upload da imagem', upload_to='media/imagens/', default='media/imagens/default_pic.jpg')
     # Criei uma nova pasta chamada imagens para que o upload seja feito para essa pasta.
 
     class Meta:
@@ -14,7 +15,7 @@ class ImagemPerfil(SingletonModel):
         verbose_name_plural = 'Imagens de Perfil'
 
     def __str__(self):
-        return self.url
+        return self.nome
 
 
 

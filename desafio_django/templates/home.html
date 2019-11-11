@@ -14,7 +14,7 @@
 
         {% for imagem in imagemPerfil %} <!--Agora a imagem de perfil também é editável-->
         <div>
-            <img class="imagem_perfil" src="{{ imagem.url }}" alt="Imagem de perfil">
+            <img class="imagem_perfil" src="{{ imagem.imagem.url }}" alt="Imagem de perfil">
         </div>
         {% endfor %}
 

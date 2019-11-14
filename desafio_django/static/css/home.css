@@ -47,6 +47,14 @@ body{
     width: 250px;
 }
 
+.form_de_contato{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding-left: 750px;
+    padding-top: 15px;
+}
+
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}

@@ -1,7 +1,6 @@
 #footer{
     width: 100%;
     height: 228px;
-    display: flex;
     position: fixed;
     left: 0%;
     bottom: 0%;
@@ -21,11 +20,11 @@
 
 #texto_direita{
     display: flex;
-    position: fixed;
+    position: absolute;
     color: #ffffff;
     height: 53px;
     width: 450px;
-    bottom: 3%;
+    bottom: 10%;
     right: 1%;
     justify-self: flex-end;
     justify-content: space-evenly;

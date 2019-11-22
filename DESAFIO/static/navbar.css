@@ -1,0 +1,51 @@
+#navbar{
+    width: 100%;
+    height: 197px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background-color: #1694C1;
+}
+
+#itens_esquerda{
+    height: 197px;
+    width: 400px;
+    display: flex;
+    margin-left: 10px;
+    align-items: flex-end;
+}
+
+#logo_hotel{
+    width: 162px;
+    height: 162px;
+
+}
+
+#nome_hotel{
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+
+#itens_direita{
+    position: absolute;
+    height: 197px;
+    width: 300px;
+    right: 15%;
+    top: 5%;
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+#inicio{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#pacotes{
+    text-decoration: none;
+    color: #FFFFFF;
+}

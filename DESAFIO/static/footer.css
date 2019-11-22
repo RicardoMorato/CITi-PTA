@@ -18,3 +18,27 @@
     padding-bottom: 75px;
     justify-content: space-between;
 }
+
+#texto_direita{
+    display: flex;
+    position: fixed;
+    color: #ffffff;
+    height: 53px;
+    width: 450px;
+    bottom: 3%;
+    right: 1%;
+    justify-self: flex-end;
+    justify-content: space-evenly;
+    align-items: baseline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 33px;
+}
+
+#coracao{
+    height: 25px;
+    width: 25px;
+}
+
+#logo_citi{
+    height: 25px;
+}

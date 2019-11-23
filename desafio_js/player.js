@@ -2,6 +2,7 @@ const playerElement = document.querySelector('#my_player');
 const controls = playerElement.querySelector('.buttons_box');
 const audioElement = playerElement.querySelector('audio');
 const progressBar = playerElement.querySelector('.progress_bar');
+const progressBarLowOpacity = playerElement.querySelector('.progress_bar_low_opacity');
 
 const actionBtn = controls.querySelector('.action');
 const forwards = controls.querySelector('.forwards');
@@ -26,3 +27,7 @@ backwards.addEventListener('click', () => {
 audioElement.addEventListener('timeupdate', () => {
     progressBar.style.width = 100 * (audioElement.currentTime) / (audioElement.duration)+'%';
 })
+
+// audioElement.addEventListener('click', () => {
+//     progressBar.style.width = 100 * () / (progressBarLowOpacity.style.width) + '%';
+// })

@@ -11,15 +11,16 @@
 
 <body>
     <section id="my_player">
+        <audio src="Live_And_Let_Die.mp3"></audio>
         <div class="buttons_box_box">
             <div class="buttons_box">
-                <button>
+                <button class="backwards">
                     <img src="images/backward.svg" alt="10_seconds_minus">
                 </button>
-                <button>
+                <button class="action">
                     <img src="images/play_correto.svg" alt="play_or_pause">
                 </button>
-                <button>
+                <button class="forwards">
                     <img src="images/forward.svg" alt="10_seconds_plus">
                 </button>
             </div>
@@ -32,10 +33,13 @@
             <div class="logo_citi">
                 <img src="images/Logo - Branca.png" alt="Logo do CITi" id="detalhe_img">
             </div>
+            <div class="progress_bar_low_opacity">
+            </div>
             <div class="progress_bar">
             </div>
         </div>
     </section>
+    <script src="player.js"></script>
 </body>
 
 </html>

@@ -76,11 +76,21 @@ h1{
     width: 75px;
 }
 
+.progress_bar_low_opacity{
+    position: absolute;
+    background: rgba(196, 196, 196, 0.5);
+    opacity: 0.3;
+    height: 2.5%;
+    width: 100%;
+    left: 0;
+    bottom: 15%;
+}
+
 .progress_bar{
     position: absolute;
     background: rgba(196, 196, 196, 0.5);
     height: 2.5%;
-    width: 10%;
+    width: 0%;
     left: 0;
     bottom: 15%;
 }

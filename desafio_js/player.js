@@ -4,15 +4,15 @@ const audioElement = playerElement.querySelector('audio');
 const progressBar = playerElement.querySelector('.progress_bar');
 const progressBarLowOpacity = playerElement.querySelector('.progress_bar_low_opacity');
 
-const actionBtn = controls.querySelector('.action');
+const playBtn = controls.querySelector('.play');
 const forwards = controls.querySelector('.forwards');
 const backwards = controls.querySelector('.backwards');
 
-actionBtn.addEventListener('click', () => {
+playBtn.addEventListener('click', () => {
     audioElement.play();
 })
 
-// actionBtn.addEventListener('click', () => {
+// playBtn.addEventListener('click', () => {
 //     audioElement.pause();
 // })
 

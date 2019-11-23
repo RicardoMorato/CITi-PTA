@@ -8,8 +8,18 @@ const playBtn = controls.querySelector('.play');
 const forwards = controls.querySelector('.forwards');
 const backwards = controls.querySelector('.backwards');
 
+function checkStatePlay() {
+    const pauseButtonState = playerElement.querySelector('#pauseButton');
+    const playButtonState = playerElement.querySelector('#playButton');
+    if(audioElement.play() === true){
+        pauseButtonState.style.display = flex;
+        playButtonState.style.display = none;
+    }
+}
+
 playBtn.addEventListener('click', () => {
     audioElement.play();
+    checkStatePlay();
 })
 
 // playBtn.addEventListener('click', () => {

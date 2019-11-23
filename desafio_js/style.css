@@ -31,6 +31,10 @@ button{
     border: transparent;
 }
 
+#pauseButton {
+    display: none;
+}
+
 .music_infos{
     position: relative;
     display: flex;

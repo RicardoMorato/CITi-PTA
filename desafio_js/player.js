@@ -12,7 +12,7 @@ function checkStatePlay() {
     const pauseButtonState = playerElement.querySelector('#pauseButton');
     const playButtonState = playerElement.querySelector('#playButton');
     if(audioElement.play() === true){
-        pauseButtonState.style.display = flex;
+        pauseButtonState.style.display = pauseButtonState.style.display.flex;
         playButtonState.style.display = none;
     }
 }

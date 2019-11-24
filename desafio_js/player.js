@@ -5,26 +5,37 @@ const progressBar = playerElement.querySelector('.progress_bar');
 const progressBarLowOpacity = playerElement.querySelector('.progress_bar_low_opacity');
 
 const playBtn = controls.querySelector('.play');
+const pauseBtn = controls.querySelector('.pause');
 const forwards = controls.querySelector('.forwards');
 const backwards = controls.querySelector('.backwards');
 
-function checkStatePlay() {
-    const pauseButtonState = playerElement.querySelector('#pauseButton');
-    const playButtonState = playerElement.querySelector('#playButton');
-    if(audioElement.play() === true){
-        pauseButtonState.style.display = pauseButtonState.style.display.flex;
-        playButtonState.style.display = none;
-    }
+function checkStatePlayAdd() {
+    playBtn.classList.add('remove_button');
+}
+
+function checkStatePlayRemove() {
+    playBtn.classList.remove('remove_button');
+}
+
+function checkStatePauseRemove() {
+    pauseBtn.classList.remove('remove_button');
+}
+
+function checkStatePauseAdd() {
+    pauseBtn.classList.add('remove_button');
 }
 
 playBtn.addEventListener('click', () => {
     audioElement.play();
-    checkStatePlay();
+    checkStatePlayAdd();
+    checkStatePauseRemove();
 })
 
-// playBtn.addEventListener('click', () => {
-//     audioElement.pause();
-// })
+pauseBtn.addEventListener('click', () => {
+    audioElement.pause();
+    checkStatePlayRemove();
+    checkStatePauseAdd();
+})
 
 forwards.addEventListener('click', () => {
     audioElement.currentTime+=10;

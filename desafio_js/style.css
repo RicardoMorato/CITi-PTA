@@ -31,7 +31,7 @@ button{
     border: transparent;
 }
 
-#pauseButton {
+.remove_button {
     display: none;
 }
 

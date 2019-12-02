@@ -26,6 +26,12 @@ function checkStatePauseAdd() {
     pauseBtn.classList.add('remove_button');
 }
 
+function detectsMousePosition() {
+    const posX = event.offsetX;
+    const posY = event.offsetY;
+    console.log(posX, posY);
+}
+
 playBtn.addEventListener('click', () => {
     audioElement.play();
     checkStatePlayAdd();
@@ -51,9 +57,14 @@ audioElement.addEventListener('timeupdate', () => {
     bolinha.style.marginLeft = progressBar.style.width;
 })
 
-// audioElement.addEventListener('timeupdate', () => {
-//     const positionY = progressBar.offsetTop;
-//     const poistionX = progressBar.offsetLeft;
+progressBarLowOpacity.addEventListener('click', () => {
+    detectsMousePosition();
+    const posX = event.offsetX;
+    progressBar.style.width += (posX - progressBar.style.width) + 'px';
+})
 
-//     bolinha.offset() =
-// })
+progressBar.addEventListener('click', () => {
+    detectsMousePosition();
+    const posX = event.offsetX;
+    progressBar.style.width -= (posX - progressBar.style.width) + 'px';
+})

@@ -3,6 +3,7 @@ const controls = playerElement.querySelector('.buttons_box');
 const audioElement = playerElement.querySelector('audio');
 const progressBar = playerElement.querySelector('.progress_bar');
 const progressBarLowOpacity = playerElement.querySelector('.progress_bar_low_opacity');
+const bolinha = playerElement.querySelector('.bolinha');
 
 const playBtn = controls.querySelector('.play');
 const pauseBtn = controls.querySelector('.pause');
@@ -47,8 +48,12 @@ backwards.addEventListener('click', () => {
 
 audioElement.addEventListener('timeupdate', () => {
     progressBar.style.width = 100 * (audioElement.currentTime) / (audioElement.duration)+'%';
+    bolinha.style.marginLeft = progressBar.style.width;
 })
 
-// audioElement.addEventListener('click', () => {
-//     progressBar.style.width = 100 * () / (progressBarLowOpacity.style.width) + '%';
+// audioElement.addEventListener('timeupdate', () => {
+//     const positionY = progressBar.offsetTop;
+//     const poistionX = progressBar.offsetLeft;
+
+//     bolinha.offset() =
 // })

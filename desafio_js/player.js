@@ -61,10 +61,17 @@ progressBarLowOpacity.addEventListener('click', () => {
     detectsMousePosition();
     progressBar.style.width += event.offsetX + 'px';
     bolinha.style.marginLeft = progressBar.style.width;
-    // audioElement.currentTime = audioElement.duration * (progressBar.)
+    // audioElement.currentTime = audioElement.duration * (progressBar.style.width/progressBarLowOpacity.style.width);
 })
 
 progressBar.addEventListener('click', () => {
     detectsMousePosition();
-    progressBar.style.width -= event.offsetX + 'px';
+
+    const bar = progressBar.getBoundingClientRect();
+    const x = event.clientX;
+    const y = event.clientY;
+
+    console.log('X coords: ${Math.round(((x - bar.left)/(bar.left-bar.right)) * 100)}%');
+
+    // progressBar.style.width =  (progressBar.getBoundingClientRect() - event.offsetX);
 })

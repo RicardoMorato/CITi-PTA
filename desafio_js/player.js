@@ -2,6 +2,7 @@ const playerElement = document.querySelector('#my_player');
 const controls = playerElement.querySelector('.buttons_box');
 const audioElement = playerElement.querySelector('audio');
 const progressBar = playerElement.querySelector('.progress_bar');
+const progress_bar_fake = playerElement.querySelector('.progress_bar_fake_taokei');
 const progressBarLowOpacity = playerElement.querySelector('.progress_bar_low_opacity');
 const bolinha = playerElement.querySelector('.bolinha');
 
@@ -57,21 +58,17 @@ audioElement.addEventListener('timeupdate',  () => {
     bolinha.style.marginLeft = progressBar.style.width;
 })
 
-progressBarLowOpacity.addEventListener('click', () => {
+progress_bar_fake.addEventListener('click', () => {
     detectsMousePosition();
     progressBar.style.width += event.offsetX + 'px';
     bolinha.style.marginLeft = progressBar.style.width;
     // audioElement.currentTime = audioElement.duration * (progressBar.style.width/progressBarLowOpacity.style.width);
 })
 
-progressBar.addEventListener('click', () => {
+progress_bar_fake.addEventListener('click', () => {
     detectsMousePosition();
+    const bar = progress_bar_fake.getBoundingClientRect();
+    progressBar.style.width = Math.round(((event.clientX - bar.left)/(bar.left-bar.right)) * 100)+'%';
 
-    const bar = progressBar.getBoundingClientRect();
-    const x = event.clientX;
-    const y = event.clientY;
-
-    console.log('X coords: ${Math.round(((x - bar.left)/(bar.left-bar.right)) * 100)}%');
-
-    // progressBar.style.width =  (progressBar.getBoundingClientRect() - event.offsetX);
+    console.log(`X coords: ${Math.round(((event.clientX - bar.left)/(bar.left-bar.right)) * 100)}%`);
 })

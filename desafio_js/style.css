@@ -94,7 +94,7 @@ h1{
     position: absolute;
     background: rgba(196, 196, 196, 0.5);
     opacity: 0.3;
-    margin-top: 0.4%;
+    margin-top: 0.2%;
     height: 2.5%;
     width: 100%;
 }
@@ -102,16 +102,14 @@ h1{
 .progress_bar{
     position: absolute;
     background: rgba(196, 196, 196, 0.5);
-    margin-top: 0.4%;
+    margin-top: 0.2%;
     height: 2.5%;
     width: 0%;
 }
 
 .bolinha {
-    right: 0;
     width: 10px;
     height: 10px;
     border-radius: 100%;
     background-color: #C4C4C4;
-    top: 1%;
 }

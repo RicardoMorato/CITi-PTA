@@ -52,7 +52,7 @@ backwards.addEventListener('click', () => {
     audioElement.currentTime-=10;
 })
 
-audioElement.addEventListener('timeupdate', () => {
+audioElement.addEventListener('timeupdate',  () => {
     progressBar.style.width = 100 * (audioElement.currentTime) / (audioElement.duration)+'%';
     bolinha.style.marginLeft = progressBar.style.width;
 })
@@ -61,10 +61,11 @@ progressBarLowOpacity.addEventListener('click', () => {
     detectsMousePosition();
     const posX = event.offsetX;
     progressBar.style.width += (posX - progressBar.style.width) + 'px';
+    // audioElement.currentTime = audioElement.duration * parseFloat((progressBar.style.width+'px')/(progressBarLowOpacity.style.width+'px'));
 })
 
 progressBar.addEventListener('click', () => {
     detectsMousePosition();
     const posX = event.offsetX;
-    progressBar.style.width -= (posX - progressBar.style.width) + 'px';
+    progressBar.style.width -= (posX  + 'px');
 })

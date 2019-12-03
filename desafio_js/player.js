@@ -60,11 +60,11 @@ audioElement.addEventListener('timeupdate',  () => {
 progressBarLowOpacity.addEventListener('click', () => {
     detectsMousePosition();
     progressBar.style.width += event.offsetX + 'px';
-    // audioElement.currentTime = audioElement.duration * parseFloat((progressBar.style.width+'px')/(progressBarLowOpacity.style.width+'px'));
+    bolinha.style.marginLeft = progressBar.style.width;
+    // audioElement.currentTime = audioElement.duration * (progressBar.)
 })
 
 progressBar.addEventListener('click', () => {
     detectsMousePosition();
-    const posX = event.offsetX;
-    progressBar.style.width -= (posX  + 'px');
+    progressBar.style.width -= event.offsetX + 'px';
 })

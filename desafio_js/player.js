@@ -60,15 +60,11 @@ audioElement.addEventListener('timeupdate',  () => {
 
 progress_bar_fake.addEventListener('click', () => {
     detectsMousePosition();
-    progressBar.style.width += event.offsetX + 'px';
-    bolinha.style.marginLeft = progressBar.style.width;
-    // audioElement.currentTime = audioElement.duration * (progressBar.style.width/progressBarLowOpacity.style.width);
-})
-
-progress_bar_fake.addEventListener('click', () => {
-    detectsMousePosition();
     const bar = progress_bar_fake.getBoundingClientRect();
-    progressBar.style.width = Math.round(((event.clientX - bar.left)/(bar.left-bar.right)) * 100)+'%';
+    const progress_by_now = Math.round(((event.offsetX)/(bar.right-bar.left)) * 100)+'%';
+    progressBar.style.width = progress_by_now;
+    bolinha.style.marginLeft = progressBar.style.width;audioElement.currentTime = (progress_by_now * audioElement.duration) / 100;
+    audioElement.currentTime = ((Math.round(((event.offsetX)/(bar.right-bar.left)) * 100)) * audioElement.duration) / 100;
 
     console.log(`X coords: ${Math.round(((event.clientX - bar.left)/(bar.left-bar.right)) * 100)}%`);
 })

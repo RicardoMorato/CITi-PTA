@@ -59,8 +59,7 @@ audioElement.addEventListener('timeupdate',  () => {
 
 progressBarLowOpacity.addEventListener('click', () => {
     detectsMousePosition();
-    const posX = event.offsetX;
-    progressBar.style.width += (posX - progressBar.style.width) + 'px';
+    progressBar.style.width += event.offsetX + 'px';
     // audioElement.currentTime = audioElement.duration * parseFloat((progressBar.style.width+'px')/(progressBarLowOpacity.style.width+'px'));
 })
 
